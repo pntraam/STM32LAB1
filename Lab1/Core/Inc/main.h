@@ -59,7 +59,32 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 /* USER CODE BEGIN Private defines */
-
+#define cd_Pin GPIO_PIN_1
+#define cd_GPIO_Port GPIOA
+#define cv_Pin GPIO_PIN_2
+#define cv_GPIO_Port GPIOA
+#define cx_Pin GPIO_PIN_3
+#define cx_GPIO_Port GPIOA
+#define hd_Pin GPIO_PIN_4
+#define hd_GPIO_Port GPIOA
+#define hv_Pin GPIO_PIN_5
+#define hv_GPIO_Port GPIOA
+#define hx_Pin GPIO_PIN_6
+#define hx_GPIO_Port GPIOA
+#define aa_Pin GPIO_PIN_0
+#define aa_GPIO_Port GPIOB
+#define ab_Pin GPIO_PIN_1
+#define ab_GPIO_Port GPIOB
+#define ac_Pin GPIO_PIN_2
+#define ac_GPIO_Port GPIOB
+#define ad_Pin GPIO_PIN_3
+#define ad_GPIO_Port GPIOB
+#define ae_Pin GPIO_PIN_4
+#define ae_GPIO_Port GPIOB
+#define af_Pin GPIO_PIN_5
+#define af_GPIO_Port GPIOB
+#define ag_Pin GPIO_PIN_6
+#define ag_GPIO_Port GPIOB
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
