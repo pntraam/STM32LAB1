@@ -183,65 +183,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int counter = 0;
-  while (1)
-  {
-	  //3s
-	  if ( counter >= 0 && counter < 3) {
-		  HAL_GPIO_WritePin ( hd_GPIO_Port , hd_Pin , GPIO_PIN_RESET ) ;
-		  HAL_GPIO_WritePin ( hv_GPIO_Port , hv_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( hx_GPIO_Port , hx_Pin , GPIO_PIN_SET ) ;
-	  //
-		  HAL_GPIO_WritePin ( cd_GPIO_Port , cd_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( cv_GPIO_Port , cv_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( cx_GPIO_Port , cx_Pin , GPIO_PIN_RESET ) ;
-	  if ( counter > 9) counter = 0;
-		  display7SEG (counter++) ;
-		  HAL_Delay (1000) ;
-	  }
-	  //
-	  //
-	  else if ( counter >= 3 && counter < 5 ) {
-		  HAL_GPIO_WritePin ( hd_GPIO_Port , hd_Pin , GPIO_PIN_RESET ) ;
-		  HAL_GPIO_WritePin ( hv_GPIO_Port , hv_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( hx_GPIO_Port , hx_Pin , GPIO_PIN_SET ) ;
-	  //
-		  HAL_GPIO_WritePin ( cd_GPIO_Port , cd_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( cv_GPIO_Port , cv_Pin , GPIO_PIN_RESET ) ;
-		  HAL_GPIO_WritePin ( cx_GPIO_Port , cx_Pin , GPIO_PIN_SET ) ;
-	  if ( counter > 9) counter = 0;
-		  display7SEG ( counter++) ;
-		  HAL_Delay (1000) ;
-	  }
-	  //
-	  //
-	  else if ( counter >= 5 && counter < 8) {
-		  HAL_GPIO_WritePin ( hd_GPIO_Port , hd_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( hv_GPIO_Port , hv_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( hx_GPIO_Port , hx_Pin , GPIO_PIN_RESET ) ;
-	  //
-		  HAL_GPIO_WritePin ( cd_GPIO_Port , cd_Pin , GPIO_PIN_RESET ) ;
-		  HAL_GPIO_WritePin ( cv_GPIO_Port , cv_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( cx_GPIO_Port , cx_Pin , GPIO_PIN_SET ) ;
-	  if ( counter > 9) counter = 0;
-		  display7SEG ( counter++) ;
-		  HAL_Delay (1000) ;
-	  }
-	  //
-	 //
-	  else if ( counter >= 8 && counter < 10) {
-		  HAL_GPIO_WritePin ( hd_GPIO_Port , hd_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( hv_GPIO_Port , hv_Pin , GPIO_PIN_RESET ) ;
-		  HAL_GPIO_WritePin ( hx_GPIO_Port , hx_Pin , GPIO_PIN_SET ) ;
-	 //
-		  HAL_GPIO_WritePin ( cd_GPIO_Port , cd_Pin , GPIO_PIN_RESET ) ;
-		  HAL_GPIO_WritePin ( cv_GPIO_Port , cv_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( cx_GPIO_Port , cx_Pin , GPIO_PIN_SET ) ;
-		  display7SEG (counter++) ;
-	  if ( counter > 9) counter = 0;
-		  HAL_Delay (1000) ;
-	  }
-	 //
+int counter = 0;
+while (1) {
+  if( counter >= 10) counter = 0;
+  	  display7SEG (counter ++) ;
+  	  HAL_Delay (1000) ;
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
